@@ -1,0 +1,43 @@
+@import 'common';
+
+.main-view_page2 {
+  padding: $page-padding;
+  @media (max-width: 1400px) {
+    padding: calc($page-padding / 2);
+  }
+  @media (max-width: 1000px) {
+    padding: calc($page-padding / 4);
+  }
+  @media (max-width: 768px) {
+    padding: $page-padding-resp;
+  }
+  .page-caption {
+    font-size: $font-size-title;
+    font-family: $font-erica;
+    line-height: $title-line-height;
+    text-align: start;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 768px) {
+      font-size: $font-size-title-resp;
+      line-height: $title-line-height-resp;
+      margin-bottom: 2vw;
+    }
+    
+  }
+  .page-description {
+    font-family: $font-worksans;
+    font-weight: bold;
+    font-size: $font-size-txt;
+    line-height: $txt-line-height;
+    letter-spacing: $txt-letter-spacing;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: 768px) {
+      font-size: $font-size-txt-resp;
+      line-height: $txt-line-height-resp;
+    }
+  }
+}

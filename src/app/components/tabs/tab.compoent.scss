@@ -1,0 +1,63 @@
+@import '../../views/main/components/common.scss';
+.tab-header {
+  @include display-flex-wrap;
+  @media (max-width: 1200px) {
+    display: -webkit-inline-box;
+    flex-wrap: unset;
+    width: 50%;
+    overflow-x: scroll;
+  }
+  @media (max-width: 768px) {
+    display: none;
+    &.footer {
+      display: -webkit-inline-box;
+    }
+  }
+  padding: unset;
+  .tab-body {
+      padding: 10px 20px;
+      margin: 0px 5px;
+      list-style-type: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      @media (max-width: 1300px) {
+        padding: 10px 10px;
+      }
+      .div-logo {
+        @include display-flex-wrap-center;
+        display: none;
+        .tab-logo {
+            width: 30px;
+            height: 30px;
+        }
+      }
+      .tab-name {
+        display: block;
+        color: white;
+        font-size: 15px;
+        @media (max-width: 1336px) {
+          // display: none;
+        }
+      }
+
+      &.selected {
+        border-bottom: 1px solid white;
+        @media (max-width: 1200px) {
+          border-bottom: unset;
+        }
+        opacity: 0.2;
+      }
+
+      &::marker {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.2;
+        border-bottom: 1px solid white;
+        @media (max-width: 1200px) {
+          border-bottom: unset;
+        }
+      }
+  }
+}

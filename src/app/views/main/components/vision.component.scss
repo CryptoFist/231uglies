@@ -1,0 +1,72 @@
+@import 'common';
+.main-view_page4 {
+  padding: $page-padding;
+  @include display-flex-wrap;
+  background: #F4FFD6;
+  @media (max-width: 1400px) {
+    padding: calc($page-padding / 2);
+  }
+  @media (max-width: 1000px) {
+    padding: calc($page-padding / 4);
+  }
+  @media (max-width: 768px) {
+    padding: 0px $page-padding-resp $page-padding-resp $page-padding-resp;
+  }
+  .div-description {
+    .div-vision {
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+        margin-bottom: 5vw;
+      }
+      .txt-caption {
+        font-family: $font-erica;
+        font-size: $font-size-title;
+        line-height: $title-line-height;
+        color: #040404;
+        text-align: start;
+        @media (max-width: 768px) {
+          font-size: $font-size-title-resp;
+          line-height: $title-line-height-resp;
+        }
+      }
+      .txt-description {
+        font-family: $font-worksans;  
+        font-weight: bold;
+        font-size: $font-size-txt;
+        line-height: $txt-line-height;
+        letter-spacing: $txt-letter-spacing;
+        color: #040404;
+        @media (max-width: 768px) {
+          font-size: $font-size-txt-resp;
+          line-height: $txt-line-height-resp;
+        }
+      }
+    }
+    .div-rarity {
+      margin-bottom: 30px;
+      .txt-caption {
+        font-family: $font-erica;
+        text-align: start;
+        font-weight: bold;
+        font-size: $font-size-title;
+        line-height: $title-line-height;
+        color: black;
+        @media (max-width: 768px) {
+          font-size: $font-size-title-resp;
+          line-height: $title-line-height-resp;
+        }
+      }
+      .txt-description {
+        font-family: $font-worksans;
+        font-weight: bold;
+        font-size: $font-size-txt;
+        line-height: $txt-line-height;
+        color: black;
+        @media (max-width: 768px) {
+          font-size: $font-size-txt-resp;
+          line-height: $txt-line-height-resp;
+        }
+      }
+    }
+  }
+}

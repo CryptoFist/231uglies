@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+$font-erica: 'Erica One', cursive;
+$font-worksans: 'Work Sans', sans-serif;
+$font-luckiest: 'Luckiest Guy', cursive;
+$font-fuzzy: 'Fuzzy Bubbles', cursive;
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-rubik: 'Rubik', sans-serif;
+
+$font-size-txt: 22px;
+$font-size-txt-resp: 4.5vw;
+$txt-line-height: 26px;
+$txt-line-height-resp: 5vw;
+$txt-letter-spacing: -0.02em;
+
+$font-size-title: 46px;
+$font-size-title-resp: 10vw;
+$title-line-height: 69px;
+$title-line-height-resp: 14vw;
+$title-letter-spacing: -0.02em;
+
+$page-space: 80px;
+$page-padding: 60px;
+$page-padding-resp: 5.2vw;
+$page-space-resp: 5.2vw;
+
+$color-home: #b55f5f;
+
+@mixin display-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin display-flex {
+  display: flex;
+}
+
+@mixin display-flex-wrap-center {
+  @include display-flex-wrap();
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin display-flex-wrap-center-center {
+  @include display-flex-wrap();
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+p {
+  margin: unset;
+}
+
+figure {
+  margin: unset;
+}

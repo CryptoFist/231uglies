@@ -1,0 +1,184 @@
+@import 'common';
+.main-view_page1 {
+  @include display-flex;
+  height: 90vh;
+  background-size: cover;
+  padding-left: calc($page-padding / 2);
+  padding-right: calc($page-padding / 2);
+
+  @media (max-width: 1400px) {
+    padding: 0px calc($page-padding / 2) 0px calc($page-padding / 2);
+  }
+  @media (max-width: 1000px) {
+    padding: 0px calc($page-padding / 4) 0px calc($page-padding / 4);
+  }
+  @media (max-width: 768px) {
+    padding: 0px $page-padding-resp 0px $page-padding-resp;
+  }
+
+  @media (max-width: 1080px) {
+    display: block;
+  }
+
+  .page-pic {
+    @include display-flex-wrap-center;
+    align-content: flex-end;
+    @media (max-width: 1080px) {
+      height: 50vh;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      height: 40vh;
+    }
+    .img-uglies {
+      height: 70vh;
+      width: auto;
+      @media (max-width: 1310px) {
+        height: 70vh;
+      }
+      @media (max-width: 1310px) {
+        height: 60vh;
+      }
+      @media (max-width: 1080px) {
+        height: 50vh;
+        // border-radius: 50%;
+      }
+      @media (max-width: 768px) {
+        width: 45vw;
+        height: auto;
+      }
+      @media (max-width: 630px) {
+        width: 55vw;
+      }
+      @media (max-width: 560px) {
+        width: 55vw;
+      }
+      @media (max-width: 500px) {
+        width: 65vw;
+      }
+      @media (max-width: 430px) {
+        width: 80vw;
+      }
+      @media (max-width: 380px) {
+        width: 90vw;
+      }
+      @media (max-width: 330px) {
+        width: 100vw;
+      }
+    }
+  }
+  .page-mint {
+    @include display-flex-wrap-center;
+    @media (max-width: 1080px) {
+      height: 40vh;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      align-content: space-around;
+      height: 50vh;
+    }
+    .div-logo {
+      @include display-flex-wrap-center;
+      @media (max-width: 1080px) {
+        width: 60%;
+        height: 100%;
+        align-content: flex-end;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+      }
+      .page-logo {
+        height: 50vh;
+        width: auto;
+      
+        @media (min-width: 1500px) {
+          height: 60vh;
+        }
+        @media (min-width: 1600px) {
+          height: 65vh;
+        }
+        @media (max-width: 1350px) {
+          height: 45vh;
+        }
+        @media (max-width: 1200px) {
+          height: 40vh;
+        }
+        @media (max-width: 1130px) {
+          height: 42vh;
+        }
+        @media (max-width: 768px) {
+          width: 55vw;
+          height: auto;
+        }
+        @media (max-width: 650px) {
+          width: 70vw;
+          height: auto;
+        }
+        @media (max-width: 500px) {
+          width: 90vw;
+        }
+        @media (max-width: 400px) {
+          width: 100vw;
+        }
+      }
+    }
+    .div-mint {
+      @include display-flex-wrap-center;
+      width: 100%;
+      @media (max-width: 1080px) {
+        width: 40%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .btn-mint {
+        @include display-flex-wrap-center;
+        background-color: $color-home;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 50px;
+        box-shadow: 0px 4px 37px black;
+
+        @media (max-width: 768px) {
+          margin-top: 3.5vw;
+        }
+
+        .btn-txt {
+          padding: 0px 80px;
+          text-align: center;
+          color: black;
+          font-size: 3em;
+          font-family: $font-luckiest;
+          letter-spacing: 0.1em;
+          text-shadow: 3px 3px 3px #ababab;
+          line-height: 1.5;
+          @media (max-width: 1040px) {
+            padding: 0px 80px;
+          }
+          @media (max-width: 768px) {
+            font-size: 2.5em;
+            padding: 0px 13vw;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0px 4px 37px #92974c;
+        }
+      }
+      .mint-info {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.5em;
+        font-family: $font-fuzzy;
+        color: white;
+        text-shadow: black 1px 0 15px;
+        @media (max-width: 768px) {
+          margin-top: 1vw;
+        }
+      }
+    }
+  }
+}

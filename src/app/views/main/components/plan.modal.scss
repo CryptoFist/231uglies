@@ -1,0 +1,88 @@
+@import 'common';
+.planmodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 15px;
+  background: #201C21;
+  box-shadow: 0px 4px 114px rgba(196, 57, 221, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  background: #32328d;
+
+  .modal-caption {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: white;
+  }
+
+  .plan-list {
+    list-style-type: none;
+    .list-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .txt-item {
+        font-size: 1.2em;
+        color: white;
+        font-weight: 150;
+        line-height: 1.5;
+        margin-right: 3em;
+      }
+      .img-item {
+        padding: 5px;
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px solid whitesmoke;
+      }
+    }
+  }
+
+  .div-close {
+    margin-top: 25px;
+    .txt-close {
+      padding: 10px 80px;
+      line-height: 2;
+      font-size: 30px;
+      color: white;
+      border-radius: 30px;
+      border: 1px solid white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0px 4px 15px black;
+      }
+    }
+  }
+}
+
+.modaloverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

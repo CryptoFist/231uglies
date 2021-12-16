@@ -1,0 +1,34 @@
+@import 'common';
+.main-view_page7 {
+  background: #984EF5;
+  padding: $page-padding;
+  @media (max-width: 1400px) {
+    padding: calc($page-padding / 2) calc($page-padding / 2) calc($page-padding / 2) calc($page-padding / 2);
+  }
+  @media (max-width: 1000px) {
+    padding: calc($page-padding / 4) calc($page-padding / 4) calc($page-padding / 4) calc($page-padding / 4);
+  }
+  @media (max-width: 768px) {
+    padding: $page-padding-resp $page-padding-resp $page-padding-resp $page-padding-resp;
+  }
+  .txt-title {
+    color: white;
+    font-size: $font-size-title;
+    line-height: $title-line-height;
+    text-shadow: #a4b517 1px 0 10px;
+    font-family: $font-erica;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-title-resp;
+      line-height: $title-line-height-resp;
+      margin-bottom: 3vw;
+    }
+  }
+  .div-team {
+    .div-row {
+      @include display-flex-wrap-center-center;
+    }
+  }
+}
