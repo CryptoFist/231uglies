@@ -1,10 +1,10 @@
 import React from "react";
 import DevInfo from "../../../components/dev-info/dev-info.component";
-import img_Flep from "../assets/img/ugly-1.png";
-import img_Yakubson from "../assets/img/ugly-2.png";
-import img_Tobias from "../assets/img/ugly-3.png";
-import img_Luis from "../assets/img/ugly-2.png";
-import img_Freddie from "../assets/img/ugly-3.png";
+import img_Flep from "../assets/img/FlepPFP.png";
+import img_Yakubson from "../assets/img/YakubsonPFP.png";
+import img_Tobias from "../assets/img/TobiasPFP.png";
+import img_Luis from "../assets/img/LuisPFP.png";
+import img_Freddie from "../assets/img/FreddiePFP.png";
 import './team.component.scss';
 
 const Team = (props: any) => {
@@ -38,7 +38,7 @@ const Team = (props: any) => {
         <div className="div-row">
           <DevInfo 
             dev_img = {img_Luis}
-            dev_name = "LUIS"
+            dev_name = "DANIEL"
             dev_info = {info_Luis}
           />
           <DevInfo 

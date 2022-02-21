@@ -40,6 +40,9 @@
         display: flex;
         flex-wrap: wrap;
         padding: unset;
+        a {
+            text-decoration: none;
+        }
         .shortcut {
             margin: unset;
             list-style-type: none;

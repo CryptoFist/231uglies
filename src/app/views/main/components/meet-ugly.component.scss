@@ -83,8 +83,8 @@
             min-height: 200px;
 
             @media (max-width: 768px) {
-              font-size: $font-size-txt-resp / 4 * 3;
-              line-height: $txt-line-height-resp / 4 * 3;
+              font-size: calc($font-size-txt-resp / 4 * 3);
+              line-height: calc($txt-line-height-resp / 4 * 3);
               min-height: unset;
             }
           }

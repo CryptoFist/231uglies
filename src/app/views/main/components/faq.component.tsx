@@ -41,7 +41,7 @@ const FAQ = () => {
               <span className="txt-question">Wen launch?</span>
             </div>
             <p className={faqOpen_1 == true ? 'txt-answer open' : 'txt-answer'}>
-              Launch is set to take place on 23/1/2022. The exact time will be announced on our socials closer to mint date. But we think you can guess it.
+              TBA (Q1)
             </p>   
           </li>
           <li className="faq-item" onClick={() => toggleFaqOpen(1)}>
@@ -59,7 +59,7 @@ const FAQ = () => {
               <span className="txt-question">What will the mint price be?</span>
             </div>
             <p className={faqOpen_3 == true ? 'txt-answer open' : 'txt-answer'}>
-              All Uglies are priced at 0.07 ETH per NFT.
+              All Uglies are priced at 0.05 ETH per NFT (subject to change).
             </p>   
           </li>
           <li className="faq-item" onClick={() => toggleFaqOpen(3)}>

@@ -91,7 +91,7 @@
 
         &.open {
           max-height: 500px;
-          transition: all 0.5s ease;
+          transition: all 0.2s ease-in-out;
           margin-bottom: 40px;
 
           @media (max-width: 768px) {

@@ -100,26 +100,13 @@
       "type": "event"
     },
     {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint32",
-          "name": "_tokenId",
-          "type": "uint32"
-        }
-      ],
-      "name": "UglieMinted",
-      "type": "event"
-    },
-    {
       "inputs": [],
       "name": "MAX_AMOUNT_PRESALE",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -130,9 +117,9 @@
       "name": "MAX_SUPPLY",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -143,9 +130,9 @@
       "name": "MAX_TX_AMOUNT",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -156,9 +143,9 @@
       "name": "PRESALE_SUPPLY",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -182,9 +169,9 @@
       "name": "PRIVATE_SUPPLY",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -195,9 +182,9 @@
       "name": "PUBLIC_SUPPLY",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -351,19 +338,12 @@
     },
     {
       "inputs": [],
-      "name": "lockMetadata",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
       "name": "minted",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -415,13 +395,32 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "presaleAllowlist",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "name": "presaleAmountMinted",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -445,9 +444,9 @@
       "name": "privateAmountMinted",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -468,25 +467,12 @@
     },
     {
       "inputs": [],
-      "name": "provenance",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
       "name": "publicAmountMinted",
       "outputs": [
         {
-          "internalType": "uint32",
+          "internalType": "uint256",
           "name": "",
-          "type": "uint32"
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -603,19 +589,6 @@
         }
       ],
       "name": "setContractUri",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_provenance",
-          "type": "string"
-        }
-      ],
-      "name": "setProvenance",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

@@ -9,7 +9,7 @@ const RoadMap = () => {
       <p className="page-title">ROADMAP</p>
       <div className="div-roadmap">
         <ul className="roadmap row">
-          <li className="map map-1">
+          <li className="map-1 map">
             <div className="div-description">
               <p className="txt-title">20%</p>
               <ul className="txt-description">
@@ -18,22 +18,22 @@ const RoadMap = () => {
               </ul>
             </div>
           </li>
-          <li className="map map-2 big">
+          <li className="map-2 map big">
             <div className="div-description">
               <p className="txt-title">40%</p>
-              <ul className="txt-description">
+              <ul className="txt-description big-space">
                 <li>5 ETH added to treasury</li>
                 <li>Creation of 231 Uglies themed banners for Twitter or Discord</li>
                 <li>15 custom 1/1 banners given away to holders</li>
               </ul>
             </div>
           </li>
-          <li className="map map-3 plan">
+          <li className="map-3 map plan">
             <div className="div-circle"></div>
           </li>
         </ul>
         <ul className="roadmap row">
-          <li className="map map-1">
+          <li className="map-1 map">
             <div className="div-description">
               <p className="txt-title">60%</p>
               <ul className="txt-description">
@@ -42,19 +42,19 @@ const RoadMap = () => {
               </ul>
             </div>
           </li>
-          <li className="map map-2">
+          <li className="map-2 map">
             <div className="div-description">
               <p className="txt-title">80%</p>
-              <ul className="txt-description">
+              <ul className="txt-description big-space">
                 <li>10 ETH added to treasury</li>
                 <li>10 ETH donation to a charity chosen by holders</li>
               </ul>
             </div>
           </li>
-          <li className="map map-3">
+          <li className="map-3 map">
             <div className="div-description">
               <p className="txt-title">100%</p>
-              <p className="txt-description center">
+              <p className="txt-description center big-space">
                 Sold out!<br/> Time for the things in plan.
               </p>
             </div>
@@ -65,7 +65,7 @@ const RoadMap = () => {
         <p className="plan-title">THINGS IN PLAN</p>
         <ul className="plan-list">
           <li className="list-item">
-            <span className="item-description">Weekly airdrops of custom-made 3D rendered/animated Uglies.<br/>These NFTs will be a part of the "231 Uglies Events" collection</span>
+            <span className="item-description">Weekly airdrops of custom-made 3D rendered/animated Uglies.<br/>These NFTs will be a part of the "231 Uglies Events" collection.</span>
             <img className="item-image" alt="item image" src={ugly_1} />
           </li>
           <li className="list-item">

@@ -19,6 +19,7 @@ import Panel from '../tabs/panel.component';
 import Tabs from '../tabs/tab.component';
 
 function MainHeader(props: any) {
+    const {handleChange} = props;
     const [menuOpen, setMenuOpen] = useState(false);
     const handleClickTabMenu = () => {
         setMenuOpen(prevState => !prevState);
@@ -28,7 +29,7 @@ function MainHeader(props: any) {
             <div className="div-logo">
                 <img src={logo} className="header-logo" alt="logo" />
             </div>
-            <Tabs className="main-header_tabs" isFooter={false} >
+            <Tabs className="main-header_tabs" isFooter={false} handleChange={handleChange} >
                 <Panel logo = {tab1_logo} name = "Home" id="ugly-home"></Panel>
                 <Panel logo = {tab2_logo} name = "Introduction" id="ugly-introduce"></Panel>
                 <Panel logo = {tab3_logo} name = "Meet the Uglies" id="ugly-meet"></Panel>
@@ -40,29 +41,37 @@ function MainHeader(props: any) {
 
             <ul className="main-header_shortcuts">
                 <li className="shortcut">
-                    <div className="div-shortcutlogo">
-                        <img src={icon_twitter} className="shortcut-logo" />
-                    </div>
-                    <p className="shortcut-name">Twitter</p>
+                    <a href="https://twitter.com/231Uglies_NFT" target="_blank">
+                        <div className="div-shortcutlogo">
+                            <img src={icon_twitter} className="shortcut-logo" />
+                        </div>
+                        <p className="shortcut-name">Twitter</p>
+                    </a>
                 </li>
                 <li className="shortcut">
-                    <div className="div-shortcutlogo">
-                        <img src={icon_discord} className="shortcut-logo" />    
-                    </div>
-                    <p className="shortcut-name">Discord</p>
+                    <a href="https://discord.gg/UC5CNp83Qf" target="_blank">
+                        <div className="div-shortcutlogo">
+                            <img src={icon_discord} className="shortcut-logo" />    
+                        </div>
+                        <p className="shortcut-name">Discord</p>
+                    </a>
+                </li>
+                <li className="shortcut">
+                    <a href="https://opensea.io/" target="_blank">
+                        <div className="div-shortcutlogo">
+                            <img src={icon_opensea} className="shortcut-logo" />
+                        </div>    
+                        <p className="shortcut-name">OpenSea</p>
+                    </a>
                 </li>
                 {/* <li className="shortcut">
-                    <div className="div-shortcutlogo">
-                        <img src={icon_opensea} className="shortcut-logo" />
-                    </div>    
-                    <p className="shortcut-name">OpenSea</p>
+                    <a href="https://www.instagram.com/231uglies/" target="_blank">
+                        <div className="div-shortcutlogo">
+                            <img src={icon_instagram} className="shortcut-logo" />    
+                        </div>
+                        <p className="shortcut-name">Instagram</p>
+                    </a>
                 </li> */}
-                <li className="shortcut">
-                    <div className="div-shortcutlogo">
-                        <img src={icon_instagram} className="shortcut-logo" />    
-                    </div>
-                    <p className="shortcut-name">Instagram</p>
-                </li>
                 {
                     window.innerWidth <= 768 &&
                     <li className="shortcut">

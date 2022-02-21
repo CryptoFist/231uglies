@@ -31,13 +31,16 @@
       height: 40vh;
     }
     .img-uglies {
-      height: 70vh;
+      height: 80vh;
       width: auto;
-      @media (max-width: 1310px) {
+      @media (max-width: 1400px) {
         height: 70vh;
       }
-      @media (max-width: 1310px) {
-        height: 60vh;
+      @media (max-width: 1230px) {
+        height: 65vh;
+      }
+      @media (max-width: 1120px) {
+        height: 62vh;
       }
       @media (max-width: 1080px) {
         height: 50vh;
@@ -89,14 +92,14 @@
         height: auto;
       }
       .page-logo {
-        height: 50vh;
+        height: 60vh;
         width: auto;
       
-        @media (min-width: 1500px) {
-          height: 60vh;
-        }
         @media (min-width: 1600px) {
           height: 65vh;
+        }
+        @media (max-width: 1500px) {
+          height: 50vh;
         }
         @media (max-width: 1350px) {
           height: 45vh;
@@ -108,7 +111,7 @@
           height: 42vh;
         }
         @media (max-width: 768px) {
-          width: 55vw;
+          width: 50vw;
           height: auto;
         }
         @media (max-width: 650px) {
@@ -137,34 +140,107 @@
         background-color: $color-home;
         border-radius: 20px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.1s ease;
         margin-top: 50px;
         box-shadow: 0px 4px 37px black;
+        position: relative;
 
         @media (max-width: 768px) {
-          margin-top: 3.5vw;
+          margin-top: 3vw;
         }
 
-        .btn-txt {
-          padding: 0px 80px;
-          text-align: center;
-          color: black;
-          font-size: 3em;
-          font-family: $font-luckiest;
-          letter-spacing: 0.1em;
-          text-shadow: 3px 3px 3px #ababab;
-          line-height: 1.5;
-          @media (max-width: 1040px) {
-            padding: 0px 80px;
-          }
-          @media (max-width: 768px) {
-            font-size: 2.5em;
-            padding: 0px 13vw;
+        .div-action {
+          padding: 0px 40px;
+          .btn-txt {
+            text-align: center;
+            color: black;
+            font-size: 3em;
+            font-family: $font-luckiest;
+            letter-spacing: 0.1em;
+            text-shadow: 3px 3px 3px #ababab;
+            line-height: 1.5;
+            transition: all 0.3s ease;
+
+            &:hover {
+              // box-shadow: 0px 4px 37px #92974c;
+            }
+            &.amount {
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+            @media (max-width: 1040px) {
+            }
+            @media (max-width: 768px) {
+              font-size: 2.5em;
+            }
           }
         }
 
         &:hover {
           box-shadow: 0px 4px 37px #92974c;
+        }
+
+        &.disable {
+          background: #463f3f;
+          .btn-txt {
+            color: #938080;
+            text-shadow: unset;
+          }
+          cursor: default;
+          &:hover {
+            box-shadow: 0px 4px 37px black;
+          }
+          .div-action {
+            .btn-txt {
+              &.amount {
+                &:hover {
+                  &:hover {
+                    cursor: default;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .select-amount {
+          position: absolute;
+          top: 100%;
+          background: #49445c;
+          width: 90%;
+          list-style-type: none;
+          padding: unset;
+          margin: unset;
+          border-radius: 10px;
+          max-height: 0px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          @media (max-width: 768px) {
+            bottom: 100%;
+            top: auto;
+          }
+
+          &.open {
+            max-height: 200px;
+          }
+          .amount-item {
+            font-family: $font-fuzzy;
+            font-weight: 600;
+            font-size: $font-size-txt;
+            line-height: $txt-line-height;
+            text-align: center;
+            color: black;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: #9d9d62;
+            }
+          }
         }
       }
       .mint-info {

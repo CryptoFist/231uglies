@@ -20,11 +20,15 @@ const MeetUgly = () => {
   const [uglyIndex_2, setUglyIndex_2] = useState(0);
   const [uglyIndex_3, setUglyIndex_3] = useState(0);
 
+  const changeCharacter = () => {
+    setUglyIndex_1(prevuglyIndex_1 => (prevuglyIndex_1 + 1) % 3);
+    setUglyIndex_2(prevuglyIndex_2 => (prevuglyIndex_2 + 1) % 3);
+    setUglyIndex_3(prevuglyIndex_3 => (prevuglyIndex_3 + 1) % 3);
+  }
+
   useEffect(() => {
-    setTimeout(() => setUglyIndex_1((uglyIndex_1 + 1) % 3), 1000);
-    setTimeout(() => setUglyIndex_2((uglyIndex_2 + 1) % 3), 1100);
-    setTimeout(() => setUglyIndex_3((uglyIndex_3 + 1) % 3), 1200);
-  }, [uglyIndex_1, uglyIndex_2, uglyIndex_3]);
+    setInterval(changeCharacter, 1200);
+  }, []);
   return (
     <div id="ugly-meet" className="main-view_page3">
       <p className="page-caption">MEET THE UGLIES</p>

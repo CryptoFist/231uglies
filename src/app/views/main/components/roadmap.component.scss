@@ -30,7 +30,7 @@
     }
     .roadmap {
       @include display-flex-wrap-center;
-      justify-content: space-between;
+      justify-content: start;
       // list-style-type: none;
       .map {
         height: 100%;
@@ -39,12 +39,10 @@
         background: #FF9900;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 60px;
-        padding-top: 20px;
-        padding-bottom: 40px;
-        min-height: 300px;
+        min-height: 400px;
+        padding: 20px 5px 40px 5px;
         @media (max-width: 768px) {
-          padding-top: 6.5vw;
-          padding-bottom: 3vw;
+          padding: 5vw 8vw 7vw 8vw;
           min-height: unset;
         }
         @media (max-width: 500px) {
@@ -54,18 +52,20 @@
       &.row {
         padding: unset;
         margin: unset;
-        margin-bottom: 4vh;
+        margin-bottom: 3vh;
         .map-1 {
           width: 28vw;
         }
         .map-2 {
           width: 33vw;
+          margin-left: 3vw;
           &.big {
-            width: 56vw;
+            width: 55vw;
           }
         }
         .map-3 {
-          width: 23vw;
+          width: 19vw;
+          margin-left: 3vw;
 
           &.plan {
             background: unset;
@@ -79,6 +79,17 @@
               border-radius: 50%;
               background: white;
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          margin-bottom: unset;
+          .map {
+            width: 100%;
+            margin-top: 3vw;
+            &.big {
+              width: 100%;
             }
           }
         }
@@ -105,20 +116,29 @@
           line-height: $title-line-height;
         }
         @media (max-width: 768px) {
-          font-size: 6vw;
-          line-height: 1;
+          font-size: $font-size-title-resp;
+          line-height: $title-line-height-resp;
         }
       }
       .txt-description {
         font-family: $font-worksans;
-        font-size: 25px;
+        font-size: 30px;
         line-height: 1.5;
         font-weight: 600;
         color: white;
         font-weight: 600;
         text-align: start;
         letter-spacing: $txt-letter-spacing;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 4px 4px rgba(117, 96, 96, 0.25);
+
+        &.big-space {
+          line-height: 1.8;
+
+          @media (max-width: 768px) {
+            letter-spacing: unset;
+            line-height: $txt-line-height-resp;
+          }
+        }
 
         &.center {
           text-align: center;
@@ -132,14 +152,14 @@
         }
 
         @media (max-width: 980px) {
-          font-size: $font-size-txt;
+          font-size: 25px;
         }
         @media (max-width: 880px) {
           font-size: $font-size-txt;
         }
         @media (max-width: 768px) {
-          font-size: 3.5vw;
-          padding-left: 7vw;
+          font-size: $font-size-txt-resp;
+          padding-left: $txt-line-height-resp;
           margin-top: 2vw;
         }
       }
@@ -168,9 +188,7 @@
       }
     }
     .plan-list {
-      @media (max-width: 768px) {
-        padding-left: 4vw;
-      }
+      padding-left: unset;
       .list-item {
         @include display-flex-wrap-center;
         justify-content: start;
